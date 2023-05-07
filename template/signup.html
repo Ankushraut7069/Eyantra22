@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <title>Signup Page</title>
+        <style>
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+                background-color: rgb(209, 223, 82);
+            }
+            button{
+                background-color: #117a15;
+                width: 25%;
+                padding: 15px;
+                color: rgb(20, 3, 3);
+                border: none;
+                float: center;
+                font-size: 15px;
+            }
+            label{
+                font-size: 20px;
+            }
+            form{
+                border: 3px solid #f1f1f1;
+            }
+            input[type=email],input[type=text]{
+                width: 50%;
+                font-size: 15px;
+                margin: 8px 0px;
+                padding: 12px 20px;
+                display: inline-block;
+                border: 2px solid rgb(10, 109, 10);
+                box-sizing: border-box;
+            }
+            input[type=radio]{
+                height: 18px;
+                width: 18px;
+            }
+            button:hover{
+                opacity:0.7;
+
+            }
+            .container{
+                padding: 50px;
+                background-color: rgb(183, 240, 196);
+            }
+            .imgcontainer {
+                text-align: center;
+                margin: 24px 0 12px 0;
+            }
+              
+            img.avatar {
+                 width: 50%;
+                border-radius: 200%;
+            }  
+        </style>
+    </head>
+    <body>
+        
+        <center><h1>Registration From</h1></center>
+        
+        <form action="#" method="post">
+            {% csrf_token %}
+            {% load static %}
+            <center><div class="container">
+                <div class="imgcontainer">
+                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img src="{% static 'yantra.png'%}" alt="Avatar" class="avatar">
+                </div>
+                <label for='Name'><b>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspName: </b></label>
+		        <input type='text' placeholder="Enter your full name" name='Name' required><br>
+                <label for='country'><b>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspcountry: </b></label>
+		        <input type='text' placeholder="Enter your country name" name='country' required><br>
+		        <label for='college'><b>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspcollege:</b></label>
+		        <input type='text' placeholder='Enter your college name' name='college' required><br>
+		        <label for='sex' ><b>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspGender: </b></label>
+		        <input type='radio' name='sex' value='male' required>
+		        <label ><b>Male</b></label>
+		        <input type='radio' name='sex' value='female' required>
+		        <label ><b>Female</b></label><br>
+            	<label for ='email'><b>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspEmail Id:  </b></label>
+            	<input type="email" placeholder="Enter email" name="email" float="right"  required><br>
+                <label for='contactNo'><b>&nbsp&nbspcontactNo: </b></label>
+		        <input type='text' placeholder="Enter your contactNo" name='contactNo' required><br>
+                <label for='Department'><b>Department: </b></label>
+		        <input type='text' placeholder="Enter your Department" name='Department' required><br>
+                <label for='year'><b>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspyear: </b></label>
+		        <input type='text' placeholder="Enter your year" name='year' required><br>
+            	<label for='password'><b>&nbsp&nbspPassword: </b></label>
+            	<input type="text" placeholder="Enter Password" name="password" required><br>  
+            	&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<button type="submit"><b>Signup</b></button><br>     
+            	&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspAlready an account <a href="http://localhost:8000/login/"> Login </a>
+            </div></center>
+        </form>
+    </body>
+</html>
